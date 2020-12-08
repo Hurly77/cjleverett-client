@@ -1,26 +1,14 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import WebFont from 'webfontloader'
 import {makeStyles} from '@material-ui/core/styles'
-
-WebFont.load({
-  google: {
-    families: ['MuseoModerno', 'cursive']
-  }
-})
+import Logo from '../components/Logo'
+import Menu from '../components/Menu'
 
 const useStyle = makeStyles({
   root: {
     background: '#0b4f6c',
   },
-  MenuIcon: { 
-    color: '#fbfbff',
-  },
-  Home: {
-    fontFamily: 'MuseoModerno, cursive', 
-    color: 'inherit',
-  }
 })
 
 
@@ -29,6 +17,8 @@ const SiteBar = () => {
   return (
     <AppBar position="absolute" className={classes.root}>
     <Toolbar>
+      <Logo />
+      <Menu />
     </Toolbar>
   </AppBar>
   )
