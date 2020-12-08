@@ -1,9 +1,12 @@
 import './App.css';
+import SiteBar from './components/SiteBar'
 
 function App() {
+  
   return (
-    <div className="App">
-    </div>
+    <>
+      <SiteBar />
+    </>
   );
 }
 
