@@ -9,10 +9,6 @@ const useStyle = makeStyles({
   }
 })
 
-const handleClick = (e) => {
-  
-}
-
 const Logo = () => {
   const classes = useStyle()
   return (
