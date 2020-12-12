@@ -1,17 +1,9 @@
 import { Container, Typography } from '@material-ui/core'
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
-
-const useStyle = makeStyles({
-  root: {
-
-  }
-})
 
 const Bio = () => {
-  const classes = useStyle()
   return (
-   <Container component="section" align={'center'} className={classes.root}>
+   <Container component="section" align={'center'}>
      <Typography component="h2" variant={'h5'}>
         Hi, I'm Cameron
      </Typography>
