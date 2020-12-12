@@ -6,6 +6,10 @@ const useStyle = makeStyles({
   Menu: {
       fontFamily: 'MuseoModerno, cursive', 
       color: 'inherit',
+      '& img': {
+        width: '35px',
+        height: '35px'
+      }
   }
 })
 
@@ -13,7 +17,7 @@ const Logo = () => {
   const classes = useStyle()
   return (
     <IconButton className={classes.Menu}>
-      CJL
+       <img src={process.env.PUBLIC_URL + "LOGO2.png"} alt="1"/>
     </IconButton>
   )
 }
