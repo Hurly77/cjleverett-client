@@ -3,6 +3,33 @@
   "name": "Create React App Sample",
   "icons": [
   ],
+  "pngs": [
+    {
+      "src": "Skills.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "LOGO.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "LOGO3.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "LOGO2.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "Projects.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
