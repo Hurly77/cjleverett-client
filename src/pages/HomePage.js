@@ -10,8 +10,15 @@ const useStyles = makeStyles({
     zIndex: 1000,
     borderRadius: '5px',
     position: 'relative',
-    backgroundColor: '#fbfbff'
-  }
+    backgroundColor: '#fbfbff',
+    '& img': {
+      display: 'block',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      width: '80%'
+    },
+  },
+ 
 })
 
 const styles = (theme) => ({
@@ -26,8 +33,9 @@ console.log(props)
   return (
     <div>
       <SiteBar />
-      <Container className={obj.root}>
       <About prop={classes.toolbar} />
+      <Container className={obj.root}>
+      <img src={process.env.PUBLIC_URL + "Skills.png"} alt="1"/>
       </Container>
       <Skills />
       <Projects prop={classes.toolbar}/>
