@@ -1,16 +1,12 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import {Container, makeStyles} from '@material-ui/core';
-
 const useStyle = makeStyles((theme) => ({
 	root : {
 		display  : 'flex',
     flexWrap : 'wrap',
     justifyContent: 'center',
-    paddingLeft: '',
     alignItems: 'center',
-    backgroundColor: '#20bf55',
-    paddingTop: '60px',
 		'& > *'  : {
       backgroundColor: '#01baef',
 			margin : theme.spacing(3),
@@ -18,17 +14,35 @@ const useStyle = makeStyles((theme) => ({
 			height : theme.spacing(60),
 		},
 	},
+	div: {
+		height: '300px'
+	},
+	sectionA: {
+	'& img': {
+			
+		display: 'block',
+		marginLeft: 'auto',
+		marginRight: 'auto',
+		width: '100%'
+	},
+		
+	}
 }));
 
 const Projects = (prop) => {
-  const classes = useStyle();
-  console.log(prop.prop)
+	const classes = useStyle();
+	const props = prop
+  console.log(props)
 	return (
     <>
+		<div className={classes.div}>
+		</div>
+		<Container align="center" className={classes.sectionA}>
+		<img width="800px" src={process.env.PUBLIC_URL + "Projects.png"} alt="1"/>
+		</Container>
 		<Container maxWidth="xl" className={classes.root} align="center">
 			<Paper elevation={20} />
 			<Paper elevation={20}/>
-      <Paper elevation={20} />
       <Paper elevation={20} />
       <Paper elevation={20} />
 		</Container>
