@@ -11,7 +11,7 @@ const useStyle = makeStyles((theme) => ({
       backgroundColor: '#01baef',
 			margin : theme.spacing(3),
 			width  : theme.spacing(50),
-			height : theme.spacing(60),
+			height : theme.spacing(50),
 		},
 	},
 	div: {
@@ -19,7 +19,6 @@ const useStyle = makeStyles((theme) => ({
 	},
 	sectionA: {
 	'& img': {
-			
 		display: 'block',
 		marginLeft: 'auto',
 		marginRight: 'auto',
@@ -40,12 +39,12 @@ const Projects = (prop) => {
 		<Container align="center" className={classes.sectionA}>
 		<img width="800px" src={process.env.PUBLIC_URL + "Projects.png"} alt="1"/>
 		</Container>
-		<Container maxWidth="xl" className={classes.root} align="center">
-			<Paper elevation={20} />
+		<div className={classes.root}>
+			<Paper elevation={20} ></Paper>
 			<Paper elevation={20}/>
       <Paper elevation={20} />
       <Paper elevation={20} />
-		</Container>
+		</div>
     </>
 	);
 };
