@@ -22,7 +22,7 @@ export const Header = (prop) => {
 			<div className={prop.prop} />
 			<Typography component="h1" variant={'h2'}>Full Stack Developer</Typography>
 			<img src={process.env.PUBLIC_URL + "LOGO3.png"} alt="1"/>
-			<Typography component="p">I Build Full Stack application, I love what I do and, I always push myself to learn more evey day</Typography>
+			<Typography component="p">I Build a Full-Stack web application and, I always push myself to learn more every day.</Typography>
 		</Container>
 	);
 };

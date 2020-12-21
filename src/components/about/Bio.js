@@ -8,7 +8,7 @@ const Bio = () => {
         Hi, I'm Cameron
      </Typography>
      <Typography component="p">
-       I love Computer weather, I'm build one, Designing web applications or just reading about NVIDIA's Ampere architecture, whatever the case maybe the point is I love what I do.
+     I love Computers, whether I'm building one, developing web applications, or just reading about NVIDIA's new Ampere architecture. Whatever the case may be. The point is I love what I do.
      </Typography>
    </Container>
   )

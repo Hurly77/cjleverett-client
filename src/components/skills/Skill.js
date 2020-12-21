@@ -43,9 +43,7 @@ const Skill = () => {
 					Front-end:
 				</Typography>
 				<Typography display="inline" component="p">
-						<li>HTML,</li>
-						<li>CSS,</li>
-						<li>Material,</li>
+						<li>Material-UI,</li>
 						<li>JavaScript,</li>
 						<li>React,</li>
 						<li>Redux,</li>
@@ -58,11 +56,9 @@ const Skill = () => {
 				<Typography component="p" >
 					<li>Ruby on Rails,</li>
 					<li>Rest,</li>
-					<li>Validation<br />Authentication,</li>
+					<li>Validation,<br />Authentication,</li>
 					<li>APIs,</li>
 					<li>SQL,</li>
-					<li>MVC,</li>
-					<li>AREL,</li>
 				</Typography>
 			</Container>
 		</Container>
