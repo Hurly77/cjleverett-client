@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-snapshot'
 import App from './App';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles'
 
@@ -12,12 +12,13 @@ const theme = createMuiTheme({
     secondary: {main: '#0b4f6c'},
     text: {
       primary: '#fbfbff',
-      secondary: '#fbfbff'
+      secondary: '#fbfbff',
+      link: 'cbcbcbc',
     }
   }
 })
 
-ReactDOM.render(
+render(
   <ThemeProvider theme={theme}>
     <App />,
   </ThemeProvider>,

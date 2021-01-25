@@ -28,6 +28,21 @@
       "src": "Projects.png",
       "type": "image/png",
       "sizes": "100x100"
+    },
+    {
+      "src": "Capture.PNG",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "NextConnect.PNG",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "Trivia.PNG",
+      "type": "image/png",
+      "sizes": "100x100"
     }
   ],
   "start_url": ".",
