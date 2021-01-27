@@ -1,25 +1,19 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import {
-	Button,
-	Container,
-	makeStyles,
-	TextField,
-	FormControl,
-} from '@material-ui/core';
+import {Button, Container, makeStyles, TextField, Snackbar} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
 	div    : {
-    backgroundColor : '#01baef',
-    margin: 'auto',
+		backgroundColor : '#01baef',
+		margin          : 'auto',
 	},
 	root   : {
-    backgroundColor : '#20bf55',
-    margin: 'auto',
+		backgroundColor : '#20bf55',
+		margin          : 'auto',
 	},
 	form   : {
-    maxWidth        : "1000px",
+		maxWidth        : '1000px',
 		backgroundColor : '#0b4f6c',
 		borderRadius    : 10,
 		flexGrow        : 1,
@@ -32,82 +26,102 @@ const useStyles = makeStyles((theme) => ({
 		width           : '100%',
 		padding         : theme.spacing(2),
 		textAlign       : 'center',
-  },
-  button: {
-    width: '100%'
-  },
+	},
+	button : {
+		width : '100%',
+	},
 	space  : {
 		margin : 'auto',
 		height : 10,
 	},
 }));
 
-const sendEmail = (e) => {
-	e.preventDefault();
-
-	emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID').then(
-		(result) => {
-			console.log(result.text);
-		},
-		(error) => {
-			console.log(error.text);
-		},
-	);
-};
-
 const ContactForm = () => {
+	const userId = process.env.REACT_APP_EMAIL_JS_ID
+	const template = process.env.REACT_APP_EMAIL_JS_TEMPLATE
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+		console.log("sent")
+		emailjs.sendForm('default_service', template, e.target, userId).then(
+			(result) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			},
+		);
+		e.target.reset();
+	};
+
+	const [state, setState] = React.useState({
+		open       : false,
+		vertical   : 'bottom',
+		horizontal : 'center',
+	});
+
+	const {open, vertical, horizontal} = state;
+
+	const handleClick = () => () => {
+		setState({...state, open: true});
+		}
+
+	const handleClose = () => {
+		setState({...state, open: false});
+	};
+
 	const classes = useStyles();
 	return (
-		<div>
+		<>
 			<div className={classes.div}>
-				<Container align="center" maxWidth='md'>
+				<Container align="center" maxWidth="md">
 					<h1 style={{color: '#fbfbfb', paddingTop: '15px', fontSize: '75px'}}>Contact</h1>
-					<FormControl className={classes.form} onSubmit={sendEmail}>
+					<form className={classes.form} onSubmit={sendEmail}>
 						<Grid container spacing={10}>
 							<Grid item xs={6}>
 								<TextField
-                  label="Name"
+									label="Name"
 									color="primary"
 									className={classes.input1}
 									type="text"
-									name="user_name"
+									name="name"
 									variant="filled"
 								/>
 							</Grid>
 
 							<Grid item xs={6}>
-                <TextField 
-                label="Email"
-                className={classes.input1} 
-                type="email" 
-                name="user_email" 
-                variant="filled" />
+								<TextField label="Email" className={classes.input1} type="email" name="from" variant="filled" />
 							</Grid>
 
-              <Grid item xs={12}>
-              <TextField 
-              label="Message"
-              placeholder="what would you like to talk about"
-              className={classes.input1} 
-              name="message" 
-              variant="filled"
-              multiline
-              />
-              </Grid>
-              <br />
+							<Grid item xs={12}>
+								<TextField
+									label="Message"
+									placeholder="what would you like to talk about"
+									className={classes.input1}
+									name="message"
+									variant="filled"
+									multiline
+								/>
+							</Grid>
+							<br />
 
-              <Grid item xs={12}>
-							<Button type="submit" value="Send" onClick={() => alert("not yet active, but will be shortly")}>
-								Send
-							</Button>
-              </Grid> 
-
+							<Grid item xs={12}>
+								<Button type="submit" value="Send" onClick={handleClick()}>
+									Send
+								</Button>
+							</Grid>
 						</Grid>
-					</FormControl>
+					</form>
 				</Container>
+				<Snackbar
+				anchorOrigin={{vertical, horizontal}}
+				open={open}
+				onClose={handleClose}
+				message="message has been sent an I'll be In touch ASAP"
+				key={vertical + horizontal}
+			/>
 			</div>
-		</div>
+		</>
 	);
-};
-
+}
 export default ContactForm;
