@@ -4,6 +4,7 @@ import About from '../containers/About'
 import { Container, makeStyles, withStyles } from '@material-ui/core';
 import Skills from '../containers/Skills';
 import Projects from '../components/projects/Projects'
+import ContactForm from '../components/contact/ContactForm'
 
 const useStyles = makeStyles({
   root: {
@@ -39,6 +40,7 @@ console.log(props)
       </Container>
       <Skills />
       <Projects prop={classes.toolbar}/>
+      <ContactForm />
     </div>
   )
 }
