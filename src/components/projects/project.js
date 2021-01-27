@@ -1,71 +1,65 @@
-import React from 'react'
+import React from 'react';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import {CardActionArea, CardContent, CardMedia, CardActions, Snackbar, Button} from '@material-ui/core/';
+
 import Typography from '@material-ui/core/Typography';
-import Snackbar from '@material-ui/core/Snackbar'
-import MuiAlert from '@material-ui/lab/Alert';
-import Link from '@material-ui/core/Link';
 
+const Project = (props) => {
+	const [state, setState] = React.useState({
+		open       : false,
+		vertical   : 'bottom',
+		horizontal : 'center',
+	});
 
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+	const {open, vertical, horizontal} = state;
 
-const project = (props) => {
-  const [open, setOpen] = React.useState(false)
+	const handleClick = (prop) => () => {
+		console.log(prop);
+		if (!prop) {
+			return setState({...state, open: true});
+		} else {
+			return;
+		}
+	};
 
-   const handleClick = () => {
-     setOpen(true)
-   }
+	const handleClose = () => {
+		setState({...state, open: false});
+	};
 
-   const handleClose = (q) = () => {
-    if (q === 'clickaway') {
-      return
-    }
-    setOpen(false)
-   }
-
-
-  return (
-    <Card className={props.style} postion="center"> 
-    <CardActionArea>
-      <CardMedia
-        component="img"
-        alt="Contemplative Reptile"
-        height="200"
-        image={props.img}
-        title="Contemplative Reptile"
-        />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          {props.head}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.textBody}
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-    <CardActions>
-      <Button href={props.link}>
-        Demo
-      </Button>
-        <Button href={props.video}>
-          video
-      </Button>
-        <Button href={props.video}>
-          Repo
-      </Button>
-    </CardActions>
-    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success">
-          This is a success message!
-        </Alert>
-      </Snackbar>
-  </Card>
-  )
-}
-export default project
+	return (
+		<>
+			<Card className={props.style} postion="center">
+				<CardActionArea>
+					<CardMedia
+						component="img"
+						alt="Project IMG"
+            height="221"
+						image={props.img}
+						title="Project"
+					/>
+					<CardContent>
+						<Typography gutterBottom variant="h5" component="h2">
+							{props.head}
+						</Typography>
+						<Typography variant="body2" color="textSecondary" component="p">
+							{props.textBody}
+						</Typography>
+					</CardContent>
+				</CardActionArea>
+				<CardActions>
+					<Button href={props.link} target={"_blank"} onClick={handleClick(props.link)}>Demo</Button>
+					<Button href={props.video} target={"_blank"} onClick={handleClick(props.video)}>video</Button>
+					<Button href={props.repo} target={"_blank"} onClick={handleClick(props.repo)}>Repo</Button>
+				</CardActions>
+			</Card>
+			<Snackbar
+				anchorOrigin={{vertical, horizontal}}
+				open={open}
+				onClose={handleClose}
+				message="Sorry, not yet availble"
+				key={vertical + horizontal}
+			/>
+		</>
+	);
+};
+export default Project;
