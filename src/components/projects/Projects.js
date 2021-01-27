@@ -4,14 +4,15 @@ import {Container, makeStyles} from '@material-ui/core';
 const useStyle = makeStyles((theme) => ({
 	root     : {
 		maxWidth: 375,
-		marginLeft: 15,
+		marginLeft: '2%',
 		marginBottom: 15,
 		boxShadow: '-3px 3px 10px 0px rgba(0, 0, 0, .4)',
 		'& > *'     : {
 			backgroundColor : '#01baef',
 		},
 		'& img'  : {
-			objectFit: 'cover',	
+			maxWidth: 375,
+			maxHieght: 221,
 		},
 	},
 	div      : {
@@ -36,6 +37,7 @@ const useStyle = makeStyles((theme) => ({
 const Projects = (prop) => {
 	const classes = useStyle();
 	const props = prop;
+	
 	console.log(props);
 	return (
 		<>
@@ -45,8 +47,8 @@ const Projects = (prop) => {
 			</Container>
 			<Container align="center" className={classes.sectionB}>
 				<Project
-				video={""}
-				gitHub={""}
+				video={"https://youtu.be/qa3dJBueHgk"}
+				repo={"https://github.com/Hurly77/next-connect-front"}
 					style={classes.root}
 					link={'https://nextconnect.surge.sh/'}
 					img={process.env.PUBLIC_URL + 'NextConnect.PNG'}
@@ -56,7 +58,7 @@ const Projects = (prop) => {
 				
 				<Project
 				video={'https://www.youtube.com/watch?v=WJfSvcJnieY'}
-				gitHub={""} 
+				repo={"https://github.com/Hurly77/game-of-cards"} 
 				style={classes.root} 
 				link={null} 
 				img={process.env.PUBLIC_URL + 'Capture.PNG'} 
@@ -65,7 +67,7 @@ const Projects = (prop) => {
 				
 				<Project
 				video={'https://www.youtube.com/watch?v=MoNZkSBqgfY&t=176s'}
-				gitHub={""} 
+				repo={"https://github.com/Hurly77/TriviaNight"} 
 				style={classes.root} 
 				link={null}
 				img={process.env.PUBLIC_URL + 'Trivia.PNG'} 
