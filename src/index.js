@@ -4,10 +4,12 @@ import App from './App';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
+  spacing: 2,
   palette: {
     primary: {
       main: '#01baef',
-      contrastText: '#fbfbff'
+      contrastText: '#fbfbff',
+      text: '#fbfbfb'
     },
     secondary: {main: '#0b4f6c'},
     text: {
