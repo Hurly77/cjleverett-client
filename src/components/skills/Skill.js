@@ -37,7 +37,7 @@ const Skill = () => {
 	console.log(process.env.PUBLIC_URL + 'Cameron Leverett.png');
 	return (
 		<Container align="center" className={classes.root} maxWidth="xl">
-			<Container component="section" maxWidth="sm">
+			<Container id="skills" component="section" maxWidth="sm">
 				<Typography component="h1" variant="h3">
 					Front-end:
 				</Typography>

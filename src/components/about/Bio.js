@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 const Bio = () => {
   const classes = useStyles()
   return (
-   <Container className={classes.root} component="section" align={'center'}>
+   <Container id="about" className={classes.root} component="section" align={'center'}>
      <Typography className={classes.root} component="h2" variant={'h5'}>
         Hi, I'm Cameron
      </Typography>
