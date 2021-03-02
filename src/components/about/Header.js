@@ -12,6 +12,9 @@ const useStyle = makeStyles({
       marginRight: 'auto',
       width: '80%'
     },
+	}, 
+	p: {
+		fontSize: '20px',
 	}
 })
 
@@ -20,9 +23,9 @@ export const Header = (prop) => {
 	return (
 		<Container maxWidth="sm" align={'center'} component="section" className={classes.root}>
 			<div className={prop.prop} />
-			<Typography component="h1" variant={'h2'}>Full Stack Developer</Typography>
+			<Typography component="h1" variant={'h2'}></Typography>
 			<img src={process.env.PUBLIC_URL + "LOGO3.png"} alt="1"/>
-			<Typography component="p">I Build a Full-Stack web application and, I always push myself to learn more every day.</Typography>
+			<Typography className={classes.p}>I Build a Full-Stack web application and, I always push myself to learn more every day.</Typography>
 		</Container>
 	);
 };

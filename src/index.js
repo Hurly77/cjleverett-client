@@ -22,7 +22,7 @@ const theme = createMuiTheme({
 
 render(
   <ThemeProvider theme={theme}>
-    <App />,
+    <App />
   </ThemeProvider>,
   document.getElementById('root')
 );

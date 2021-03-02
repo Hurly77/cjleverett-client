@@ -75,7 +75,7 @@ const ContactForm = () => {
 		<>
 			<div className={classes.div}>
 				<Container id="contact" align="center" maxWidth="md">
-					<h1 style={{color: '#fbfbfb', paddingTop: '15px', fontSize: '75px'}}>Contact</h1>
+					<h2 style={{color: '#fbfbfb', paddingTop: '10px', fontSize: '60px', fontWeight: '15'}}>Say Hello <br></br></h2>
 					<form className={classes.form} onSubmit={sendEmail}>
 						<Grid container spacing={10}>
 							<Grid item xs={6}>
