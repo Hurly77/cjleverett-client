@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+import FindMeAt from '../FindMeAt'
 import {Button, Container, makeStyles, TextField, Snackbar} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
@@ -7,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
 	div    : {
 		backgroundColor : '#01baef',
 		margin          : 'auto',
-		paddingBottom: '60px',
+		paddingBottom: '15px',
 	},
 	root   : {
 		backgroundColor : '#20bf55',
@@ -121,6 +122,7 @@ const ContactForm = () => {
 				message="message has been sent an I'll be In touch ASAP"
 				key={vertical + horizontal}
 			/>
+			<FindMeAt />
 			</div>
 		</>
 	);
