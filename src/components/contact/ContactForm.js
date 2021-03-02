@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
 	div    : {
 		backgroundColor : '#01baef',
 		margin          : 'auto',
+		paddingBottom: '60px',
 	},
 	root   : {
 		backgroundColor : '#20bf55',

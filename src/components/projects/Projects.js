@@ -42,10 +42,11 @@ const Projects = (prop) => {
 	return (
 		<>
 			<div className={classes.div} />
+			<a id="projects"/>
 			<Container align="center" className={classes.sectionA}>
 				<img width="800px" src={process.env.PUBLIC_URL + 'Projects.png'} alt="1" />
 			</Container>
-			<Container id="projects" align="center" className={classes.sectionB}>
+			<Container align="center" className={classes.sectionB}>
 				<Project
 				video={"https://youtu.be/qa3dJBueHgk"}
 				repo={"https://github.com/Hurly77/next-connect-front"}

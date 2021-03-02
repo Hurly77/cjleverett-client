@@ -6,7 +6,7 @@ import Bio from '../components/about/Bio'
 const About = (prop) => {
     return (
       <>
-      <div className={prop.prop} />
+      <div id="about" className={prop.prop} />
       <Header prop={prop.prop} />
       <div className={prop.prop} />
       <Bio />
