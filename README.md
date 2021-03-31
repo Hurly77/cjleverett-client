@@ -1,2 +1,8 @@
-# My Portfolio Website
-I used `npx create-react-app` and Materiaral-UI to style. This is where I host all my projects.
+## This is the Repo for my portfolio website hosted at 
+https://cjleverett.me
+
+## Tools
+- Used Material-ui for styling lib
+- React.js lib for front end.
+
+Curently working on changing over to next.js.
