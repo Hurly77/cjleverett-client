@@ -24,7 +24,7 @@ export const Header = (prop) => {
 		<Container maxWidth="sm" align={'center'} component="section" className={classes.root}>
 			<div className={prop.prop} />
 			<Typography component="h1" variant={'h2'}></Typography>
-			<img src={process.env.PUBLIC_URL + "LOGO3.png"} alt="1"/>
+			<Image src="/images/LOGO.png" height={100} width={100}/>
 			<Typography className={classes.p}>I Build a Full-Stack web application and, I always push myself to learn more every day.</Typography>
 		</Container>
 	);
