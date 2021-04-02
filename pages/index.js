@@ -1,7 +1,13 @@
-export const HomePage = () => {
+import React from 'react'
+
+const HeadLine = () => {
   return (
-    <div>
-      
-    </div>
+    <React.Fragment>
+        <div>
+          cameron
+        </div>
+    </React.Fragment>
   )
 }
+
+export default HeadLine
