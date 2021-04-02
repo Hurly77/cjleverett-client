@@ -1,0 +1,8 @@
+html,
+body {
+  color: blueviolet;
+}
+
+* {
+  box-sizing: border-box;
+}
